@@ -23,7 +23,7 @@ namespace Demo
 
     public partial class Service : IService
     {
-        //[Example("A")]
+        [Example(new[] { "A" })]
         public void Operation([FromServices] HttpContext hc)
         {
         }
