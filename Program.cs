@@ -4,14 +4,6 @@ using System.ServiceModel;
 // Provide main
 Console.WriteLine();
 
-[AttributeUsage(AttributeTargets.Method, Inherited = false, AllowMultiple = true)]
-sealed class ExampleAttribute : Attribute
-{
-    public ExampleAttribute(params string[] args)
-    {
-    }
-}
-
 [ServiceContract]
 public interface IService
 {
@@ -21,7 +13,6 @@ public interface IService
 
 public partial class Service : IService
 {
-    //[Example("A")]
     public void Operation([FromServices] HttpContext hc)
     {
     }
